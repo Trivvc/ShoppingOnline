@@ -15,15 +15,14 @@ class Category extends Component {
   render() {
     const cates = this.state.categories.map((item) => {
       return (
-            <tr key={item._id} className="datatable" onClick={() => this.trItemClick(item)}>
-                <td>{item._id}</td>
-                <td>{item.name}</td>
-            </tr>
+        <tr key={item._id} className="datatable" onClick={() => this.trItemClick(item)}>
+          <td>{item._id}</td>
+          <td>{item.name}</td>
+        </tr>
       );
-      
     });
     return (
-      <div>
+      <div className='category__format'>
         <div className="float-left">
           <h2 className="text-center">CATEGORY LIST</h2>
           <table className="datatable" border="1">
@@ -36,15 +35,13 @@ class Category extends Component {
             </tbody>
           </table>
         </div>
-        <div className="inline" />
         <CategoryDetail item={this.state.itemSelected} updateCategories={this.updateCategories} />
-        <div className="float-clear" />
       </div>
     );
-  }
-  updateCategories = (categories) => { // arrow-function
-    this.setState({ categories: categories });
-  }
+    }
+    updateCategories = (categories) => { // arrow-function
+      this.setState({ categories: categories });
+    }
   componentDidMount() {
     this.apiGetCategories();
   }

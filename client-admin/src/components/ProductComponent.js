@@ -35,7 +35,7 @@ class Product extends Component {
       }
     });
     return (
-      <div>
+      <div className='product__page'>
         <div className="float-left">
           <h2 className="text-center">PRODUCT LIST</h2>
           <table className="datatable" border="1">
