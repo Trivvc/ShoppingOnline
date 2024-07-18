@@ -8,7 +8,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      txtUsername: 'sonkk',
+      txtUsername: 'abc',
       txtPassword: '123'
     };
   }
@@ -17,7 +17,7 @@ class Login extends Component {
       <div className="align-center">
         <h2 className="text-center">CUSTOMER LOGIN</h2>
         <form>
-          <table className="align-center">
+          <table className="align-center table__login">
             <tbody>
               <tr>
                 <td>Username</td>

@@ -14,7 +14,7 @@ class Active extends Component {
       <div className="align-center">
         <h2 className="text-center">ACTIVE ACCOUNT</h2>
         <form>
-          <table className="align-center">
+          <table className="align-center table__active">
             <tbody>
               <tr>
                 <td>ID</td>

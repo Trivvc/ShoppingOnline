@@ -4,7 +4,7 @@ import withRouter from '../utils/withRouter';
 import MyContext from '../contexts/MyContext';
 
 class ProductDetail extends Component {
-  static contextType = MyContext; // using this.context to access global state
+  static contextType = MyContext;
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +22,7 @@ class ProductDetail extends Component {
             <img src={"data:image/jpg;base64," + prod.image} width="400px" height="400px" alt="" />
             <figcaption>
               <form>
-                <table>
+                <table className='table__product'>
                   <tbody>
                     <tr>
                       <td align="right">ID:</td>
@@ -41,13 +41,13 @@ class ProductDetail extends Component {
                       <td>{prod.category.name}</td>
                     </tr>
                     <tr>
-          <td align="right">Quantity:</td>
-          <td><input type="number" min="1" max="99" value={this.state.txtQuantity} onChange={(e) => { this.setState({ txtQuantity: e.target.value }) }} /></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="submit" value="ADD TO CART" onClick={(e) => this.btnAdd2CartClick(e)} /></td>
-        </tr>
+                      <td align="right">Quantity:</td>
+                      <td><input type="number" min="1" max="99" value={this.state.txtQuantity} onChange={(e) => { this.setState({ txtQuantity: e.target.value }) }} /></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><input type="submit" value="ADD TO CART" onClick={(e) => this.btnAdd2CartClick(e)} /></td>
+                    </tr>
                   </tbody>
                 </table>
               </form>
@@ -58,7 +58,8 @@ class ProductDetail extends Component {
     }
     return (<div />);
   }
-  //event-handlers
+
+  // event-handlers
   btnAdd2CartClick(e) {
     e.preventDefault();
     const product = this.state.product;

@@ -19,7 +19,6 @@ class Mycart extends Component {
           <td>{item.quantity}</td>
           <td>{item.product.price * item.quantity}</td>
           <td><span className="link" onClick={() => this.lnkRemoveClick(item.product._id)}>Remove</span></td>
-          <td><span className="link" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</span></td>
         </tr>
       );
     });
@@ -44,14 +43,13 @@ class Mycart extends Component {
               <td colSpan="6"></td>
               <td>Total</td>
               <td>{CartUtil.getTotal(this.context.mycart)}</td>
-              <td><span className="link">CHECKOUT</span></td>
+              <td><span className="link" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</span></td>
             </tr>
           </tbody>
         </table>
       </div>
     );
   }
-  // event-handlers
   lnkRemoveClick(id) {
     const mycart = this.context.mycart;
     const index = mycart.findIndex(x => x.product._id === id);
@@ -60,6 +58,7 @@ class Mycart extends Component {
       this.context.setMycart(mycart);
     }
   }
+
   lnkCheckoutClick() {
     if (window.confirm('ARE YOU SURE?')) {
       if (this.context.mycart.length > 0) {

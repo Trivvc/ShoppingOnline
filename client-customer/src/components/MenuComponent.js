@@ -14,7 +14,6 @@ class Menu extends Component {
   render() {
     const cates = this.state.categories.map((item) => {
       return (
-        
         <li key={item._id} className="menu"><Link to={'/product/category/' + item._id}>{item.name}</Link></li>
       );
     });
@@ -22,27 +21,27 @@ class Menu extends Component {
       <div className="border-bottom">
         <div className="float-left">
           <ul className="menu">
-          <li className="menu"><Link to='/'>Home</Link></li>
-            {cates}
+          <li className="menu"><Link to='/' className='logo--hover'><div className="adidas__logo">
+          <img src="https://i.pinimg.com/564x/85/e8/ac/85e8ac7e34fc40846fedd80dee7bec86.jpg"/>
+        </div ></Link></li>
+          </ul>
+        </div>
+        <div className='menu__products'>
+          <ul>
+          {cates}
           </ul>
         </div>
         <div className="float-right">
         <form className="search">
-            <input type="search" placeholder="Enter keyword" className="keyword" value={this.state.txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
-            <input type="submit" value="SEARCH" onClick={(e) => this.btnSearchClick(e)} />
-        </form>
+        <input type="search" placeholder="Enter keyword..." className="keyword" value={this.state.txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
+        <input type="submit" className = "search__btn" value="SEARCH" onClick={(e) => this.btnSearchClick(e)} />
+      </form>
         </div>
-        <div className="float-clear" />
       </div>
     );
   }
   componentDidMount() {
     this.apiGetCategories();
-  }
-  // event-handlers
-  btnSearchClick(e) {
-    e.preventDefault();
-    this.props.navigate('/product/search/' + this.state.txtKeyword);
   }
   // apis
   apiGetCategories() {
@@ -50,6 +49,10 @@ class Menu extends Component {
       const result = res.data;
       this.setState({ categories: result });
     });
+  }
+  btnSearchClick(e) {
+    e.preventDefault();
+    this.props.navigate('/product/search/' + this.state.txtKeyword);
   }
 }
 export default withRouter(Menu);

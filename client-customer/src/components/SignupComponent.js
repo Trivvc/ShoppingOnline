@@ -17,7 +17,7 @@ class Signup extends Component {
       <div className="align-center">
         <h2 className="text-center">SIGN-UP</h2>
         <form>
-          <table className="align-center">
+          <table className="align-center table__signup">
             <tbody>
               <tr>
                 <td>Username</td>
