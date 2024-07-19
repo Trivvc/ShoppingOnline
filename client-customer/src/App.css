@@ -26,6 +26,7 @@ figure.caption-right {
   padding: 0px 20px 20px 20px;
   border: 1px solid black;
 }
+
 .text-center {
   text-align: center;
 }
@@ -60,7 +61,13 @@ div.border-bottom {
 .navbar--1 {
   z-index: 5 !important;
 }
-.active__cus a{
+.active__cus {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+
+.active__cus a {
   padding: 10px 20px;
   text-decoration: none;
   font-size: 18px;
@@ -68,10 +75,10 @@ div.border-bottom {
   color: #000;
   cursor: pointer;
   position: relative;
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
-.active__cus a::before{
+.active__cus a::before {
   content: "";
   display: block;
   position: absolute;
@@ -83,93 +90,52 @@ div.border-bottom {
   background-color: #000;
   visibility: hidden;
   z-index: 6;
-  transition: all .1s ease-in;
-
+  transition: all 0.1s ease-in;
 }
 
-.active__cus a:hover::before  {
- visibility: visible;
- opacity: 1 ;
- transition: all .1s ease-out;
-
+.active__cus a:hover::before {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.1s ease-out;
 }
 
-.myCart--right{
+.myCart--right {
   background-color: #fff;
   border-radius: 10px;
   padding: 5px 10px;
   border: 1px solid #000;
-
 }
-.myCart--right a{
+.myCart--right a {
   display: flex;
   justify-content: center;
-  align-items: flex-end ;
+  align-items: flex-end;
   gap: 5px;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
   color: #000;
   cursor: pointer;
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
 }
-.myCart--right a p{
+.myCart--right a p {
   font-size: 12px;
   margin: 0;
   padding-bottom: 2px;
   font-weight: 400;
-  transition: all .1s ease-in;
-
+  transition: all 0.1s ease-in;
 }
 
-.myCart--right:hover , .myCart--right a:hover{
+.myCart--right:hover,
+.myCart--right a:hover {
   color: #fff;
   background-color: #000;
-  transition: all .1s ease-in;
-
+  transition: all 0.1s ease-in;
 }
-.table__login{
+.table__login {
   border-spacing: 20px;
 }
 
-.table__login input[type = "text"]{
-    height: 30px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid #2b2b2b;
-    padding: 0 10px;
-}
-
-.table__login input[type = "password"]{
-    height: 30px;
-    border-radius: 10px;
-      outline: none;
-      border: 1px solid #2b2b2b;
-    padding: 0 10px;
-}
-.table__login input[type = "submit"]{
-  
-    background-color: #000;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 1px solid #000;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-    transition: all .2s ease;
-}
-
-.table__login input[type = "submit"]:hover{
-    background-color: #fff;
-    color: #000;
-    transition: all .2s ease;
-}
-
-.table__signup {
-  border-spacing: 10px;
-}
-input[type = "text"]{
+.table__login input[type="text"] {
   height: 30px;
   border-radius: 10px;
   outline: none;
@@ -177,31 +143,14 @@ input[type = "text"]{
   padding: 0 10px;
 }
 
-input[type = "password"]{
+.table__login input[type="password"] {
   height: 30px;
   border-radius: 10px;
   outline: none;
   border: 1px solid #2b2b2b;
   padding: 0 10px;
 }
-
-input[type = "tel"]{
-  height: 30px;
-  border-radius: 10px;
-  outline: none;
-  border: 1px solid #2b2b2b;
-  padding: 0 10px;
-}
-
-input[type = "email"]{
-  height: 30px;
-  border-radius: 10px;
-  outline: none;
-  border: 1px solid #2b2b2b;
-  padding: 0 10px;
-}
-
-input[type = "submit"]{
+.table__login input[type="submit"] {
   background-color: #000;
   padding: 10px 20px;
   border-radius: 10px;
@@ -210,37 +159,86 @@ input[type = "submit"]{
   font-weight: 600;
   letter-spacing: 0.8px;
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
-input[type = "submit"]:hover{
+
+.table__login input[type="submit"]:hover {
   background-color: #fff;
   color: #000;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
-.table__active{
+
+.table__signup {
+  border-spacing: 10px;
+}
+input[type="text"] {
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #2b2b2b;
+  padding: 0 10px;
+}
+
+input[type="password"] {
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #2b2b2b;
+  padding: 0 10px;
+}
+
+input[type="tel"] {
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #2b2b2b;
+  padding: 0 10px;
+}
+
+input[type="email"] {
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #2b2b2b;
+  padding: 0 10px;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.2s ease;
+}
+.table__active {
   border-spacing: 20px;
 }
 
-.table__product{
+.table__product {
   border-spacing: 15px;
 }
 
-
-
-
-ul{
+ul {
   height: 60px;
   margin: 0px;
-  padding: 0px ;
+  padding: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.logo--hover{
+.logo--hover {
   width: 60px !important;
 }
-ul .menu a{
+ul .menu a {
   padding: 0 15px;
   display: flex;
   justify-content: center;
@@ -252,15 +250,14 @@ ul .menu a{
   font-weight: 600;
   color: #000;
   cursor: pointer;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-ul .menu a:hover{
+ul .menu a:hover {
   color: #fff;
   background-color: #000;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
-
 
 li.menu {
   height: 100%;
@@ -302,25 +299,29 @@ input.search__btn:hover {
   transition: all 0.2 ease;
 }
 
-.active__cus{
-
-}
 /* datatable.css */
 .datatable {
   text-align: center;
   border-collapse: collapse;
 }
+.datatable th {
+  color: #fff;
+}
+
+.datatable tr td {
+  padding: 0 10px;
+}
 /* header */
 tr:first-child.datatable {
-  background-color: #ffcc00;
+  background-color: #000;
 }
 /* even rows, except header */
 tr:not(:first-child):nth-child(even).datatable {
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 /* odd rows, except header */
 tr:not(:first-child):nth-child(odd).datatable {
-  background-color: #ffeeaa;
+  background-color: #dddddd;
 }
 /* except header */
 tr:not(:first-child):hover.datatable {
@@ -328,10 +329,7 @@ tr:not(:first-child):hover.datatable {
   cursor: pointer;
 }
 @media screen and (max-width: 767.98px) {
-  .menu__products{
+  .menu__products {
     display: none !important;
   }
 }
-
-
-
