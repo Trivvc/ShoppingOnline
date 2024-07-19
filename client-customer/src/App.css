@@ -305,23 +305,14 @@ input.search__btn:hover {
 .active__cus{
 
 }
-
-.category__format{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 /* datatable.css */
 .datatable {
   text-align: center;
   border-collapse: collapse;
 }
-.datatable th{
-  color: #eceaea;
-}
 /* header */
 tr:first-child.datatable {
-  background-color: #353434;
+  background-color: #ffcc00;
 }
 /* even rows, except header */
 tr:not(:first-child):nth-child(even).datatable {
@@ -329,7 +320,7 @@ tr:not(:first-child):nth-child(even).datatable {
 }
 /* odd rows, except header */
 tr:not(:first-child):nth-child(odd).datatable {
-  background-color: #cccbc9;
+  background-color: #ffeeaa;
 }
 /* except header */
 tr:not(:first-child):hover.datatable {
