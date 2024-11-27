@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import withRouter from '../utils/withRouter';
+import logo from './body-logo.png';
 
 class Menu extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Menu extends Component {
         <div className="float-left">
           <ul className="menu">
           <li className="menu"><Link to='/' className='logo--hover'><div className="adidas__logo">
-          <img src="https://i.pinimg.com/564x/85/e8/ac/85e8ac7e34fc40846fedd80dee7bec86.jpg"/>
+          <img src={logo}/>
         </div ></Link></li>
           </ul>
         </div>
