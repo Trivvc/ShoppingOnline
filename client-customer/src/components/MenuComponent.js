@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import withRouter from '../utils/withRouter';
-import logo from './body-logo.png';
+import logo from '../body-logo.png';
 
 class Menu extends Component {
   constructor(props) {
@@ -22,8 +22,8 @@ class Menu extends Component {
       <div className="border-bottom">
         <div className="float-left">
           <ul className="menu">
-          <li className="menu"><Link to='/' className='logo--hover'><div className="adidas__logo">
-          <img src={logo}/>
+          <li className="menu-logo"><Link to='/home' className='logo--hover'><div className="adidas__logo">
+          <img src={logo} alt=''/>
         </div ></Link></li>
           </ul>
         </div>
@@ -34,8 +34,8 @@ class Menu extends Component {
         </div>
         <div className="float-right">
         <form className="search">
-        <input type="search" placeholder="Enter keyword..." className="keyword" value={this.state.txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
-        <input type="submit" className = "search__btn" value="SEARCH" onClick={(e) => this.btnSearchClick(e)} />
+        <input type="search" placeholder="Tìm kiếm sản phẩm..." className="keyword" value={this.state.txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
+        <input type="submit" className = "search__btn" value="Tìm Kiếm" onClick={(e) => this.btnSearchClick(e)} />
       </form>
         </div>
       </div>
