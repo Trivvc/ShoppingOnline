@@ -41,12 +41,15 @@ class Product extends Component {
           <table className="datatable" border="1">
             <tbody>
               <tr className="datatable">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Creation date</th>
-                <th>Category</th>
-                <th>Image</th>
+                <th>Mã SP</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giá</th>
+                <th>Ngày Tạo</th>
+                <th>Danh Mục</th>
+                <th>Hình Ảnh</th>
+                <th>Nhà Sản Xuất</th>
+                <th>Ngày Sản Xuất</th>
+                <th>Hạn Sử Dụng</th>
               </tr>
               {prods}
               <tr>
