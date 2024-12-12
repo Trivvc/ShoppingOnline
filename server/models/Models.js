@@ -26,7 +26,10 @@ const ProductSchema = mongoose.Schema({
   price: Number,
   image: String,
   cdate: Number,
-  category: CategorySchema
+  category: CategorySchema,
+  source: String, // nha san xuat
+  date: Number, // ngay san xuat
+  edate: Number, // han su dung
 }, { versionKey: false });
 const ItemSchema = mongoose.Schema({
   product: ProductSchema,

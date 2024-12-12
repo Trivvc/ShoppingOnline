@@ -13,6 +13,9 @@ class ProductDetail extends Component {
       txtPrice: 0,
       cmbCategory: '',
       imgProduct: '',
+      date: '',
+      e_date: '',
+      source: '',
     };
   }
   render() {
@@ -48,6 +51,18 @@ class ProductDetail extends Component {
               <tr>
                 <td>Category</td>
                 <td><select onChange={(e) => { this.setState({ cmbCategory: e.target.value }) }}>{cates}</select></td>
+              </tr>
+              <tr>
+                <td>Nhà Sản Xuất</td>
+                <td><input type='text' value={this.state.source} onChange={(e) => {this.setState({source: e.target.value})}}/></td>
+              </tr>
+              <tr>
+                <td>Ngày Sản Xuất</td>
+                <td><input type='date' value={this.state.date} onChange={(e) => {this.setState({date: e.target.value})}}/></td>
+              </tr>
+              <tr>
+                <td>Hạn Sử Dụng</td>
+                <td><input type='date' value={this.state.e_date} onChange={(e) => {this.setState({e_date: e.target.value})}}/></td>
               </tr>
               <tr>
                 <td></td>
