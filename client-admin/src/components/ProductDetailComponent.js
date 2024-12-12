@@ -125,9 +125,12 @@ class ProductDetail extends Component {
     const name = this.state.txtName;
     const price = parseInt(this.state.txtPrice);
     const category = this.state.cmbCategory;
+    const source = this.state.source;
+    const date = this.state.date;
+    const e_date = this.state.e_date;
     const image = this.state.imgProduct.replace(/^data:image\/[a-z]+;base64,/, ''); // remove "data:image/...;base64,"
-    if (id && name && price && category && category !== 'select' && image) {
-      const prod = { name: name, price: price, category: category, image: image };
+    if (id && name && price && category && category && source && date && e_date !== 'select' && image) {
+      const prod = { name: name, price: price, category: category, image: image, source: source, date: date, e_date: e_date};
       this.apiPutProduct(id, prod);
     } else {
       alert('Please input id and name and price and category and image');
@@ -137,12 +140,12 @@ class ProductDetail extends Component {
   
   btnDeleteClick(e) {
     e.preventDefault();
-    if (window.confirm('ARE YOU SURE?')) {
+    if (window.confirm('Xác Nhận Xóa Sản Phẩm Khỏi Cửa Hàng?')) {
       const id = this.state.txtID;
       if (id) {
         this.apiDeleteProduct(id);
       } else {
-        alert('Please input id');
+        alert('Vui lòng chọn một sản phẩm');
       }
     }
   }
